@@ -147,6 +147,22 @@ http://127.0.0.1:8000/
 ```
 
 ---
+## Screenshots
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Signup Page
+![Signup Page](screenshots/signup.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Create Student
+![Create Student](screenshots/create-student.png)
+
+### Student List
+![Student List](screenshots/student-list.png)
 
 ## Future Enhancements
 
