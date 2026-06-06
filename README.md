@@ -148,17 +148,6 @@ http://127.0.0.1:8000/
 
 ---
 
-## Screenshots
-
-Add screenshots of:
-- Login Page
-- Registration Page
-- Student Dashboard
-- Create Student Form
-- Student List Page
-
----
-
 ## Future Enhancements
 
 - Student Search Functionality
@@ -193,9 +182,5 @@ Through this project, I gained practical experience in:
 GitHub: https://github.com/Kiran-sai-99
 
 ---
-
-## License
-
-This project is developed for learning and educational purposes.
 
 ⭐ If you found this project useful, please consider giving it a star.
