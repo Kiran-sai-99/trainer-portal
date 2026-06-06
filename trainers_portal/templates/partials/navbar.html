@@ -1,0 +1,94 @@
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .endcorner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 15px 40px;
+
+        background-color: #1f2937;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .left-container a{
+        text-decoration: none;
+        color: white;
+
+        font-size: 1.4rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .right-container{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .username{
+        color: #d1d5db;
+        font-weight: 500;
+        font-size: 1.4rem;
+    }
+
+    .right-container a{
+        text-decoration: none;
+        color: white;
+
+        padding: 8px 16px;
+
+        border-radius: 6px;
+
+        transition: all 0.3s ease;
+    }
+
+    .right-container a:hover{
+        background-color: white;
+        color: #1f2937;
+    }
+
+</style>
+
+
+<nav class="endcorner">
+
+    <div class="left-container">
+        <a href="{% url 'display' %}">
+            Student Management System
+        </a>
+    </div>
+
+    <div class="right-container">
+
+        {% if request.user.is_authenticated %}
+
+            <span class="username">
+                {{ request.user.username.upper }}
+            </span>
+
+            <a href="{% url 'signout' %}">
+                Logout
+            </a>
+
+        {% else %}
+
+            <a href="{% url 'signin' %}">
+                Login
+            </a>
+
+            <a href="{% url 'signup' %}">
+                Signup
+            </a>
+
+        {% endif %}
+
+    </div>
+
+</nav>

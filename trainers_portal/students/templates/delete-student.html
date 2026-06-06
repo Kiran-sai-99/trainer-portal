@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Students{% endblock title %}
+
+{% block content %}
+<style>
+    .center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 100px;
+    }
+
+    p{
+        font-size: 60px;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+    }
+
+    .button-div{
+        height: 56px;
+        width: 196px;
+        border-radius: 10px;
+        background-color: grey;
+        margin: 10px;
+        border: 2px solid black;
+    }
+
+    .button-div:hover{
+        cursor: pointer;
+        background-color: darkgray;
+    }
+
+    .danger{
+        height: 60px;
+        width: 200px;
+        border-radius: 10px;
+        background-color: #dc3545;
+        color: white;
+        font-size: 20px;
+    }
+
+    .danger:hover{
+        cursor: pointer;
+        background-color: #bb2d3b;
+    }
+
+    .actions{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<div class="center">
+    <p>Are you sure you want to delete {{ student.name }}'s Record ?</p>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="actions">
+            <button class='danger' type="submit">{{ operation }}</button>
+            <div class="button-div center">
+                <a href="{% url 'display' %}">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock content %}

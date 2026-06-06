@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block title %}Students{% endblock title %}
+
+{% block content %}
+    <style>
+        table{
+            width: 90%;
+            border: 1px solid black;
+        }
+
+        th,td{
+            padding: 0.6rem;
+            border: 1px solid grey;
+        }
+
+        .center{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heading{
+            font-size: 30px;
+        }
+
+        .button-div{
+            height: 60px;
+            width: 150px;
+            border-radius: 10px;
+            background-color: darkcyan;
+            margin: 10px;
+        }
+
+        .button-div:hover{
+            cursor: pointer;
+            background-color: cadetblue;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        .actioncard{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .update-btn{
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .update-btn:hover{
+            background-color: #0b5ed7;
+        }
+
+        .delete-btn{
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover{
+            background-color: #bb2d3b;
+        }
+    </style>
+
+    <div class="center">
+        <h1 class="heading">Students Records</h1>
+        <div class="button-div center">
+            <a href="{% url 'create' %}">Add Student</a>
+        </div>
+        <table>
+            <tr>
+                <th>Serial No</th>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Address</th>
+                <th>Marks</th>
+                <th>Actions</th>
+            </tr>
+
+            {% for student in students %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.rollno }}</td>
+                    <td>{{ student.contact }}</td>
+                    <td>{{ student.email }}</td>
+                    <td>{{ student.course }}</td>
+                    <td>{{ student.address }}</td>
+                    <td>{{ student.marks }}</td>
+                    <td>
+                        <div class="actioncard">
+                            <button class="update-btn">
+                                <a href="{% url 'update' student.id %}">Update</a>
+                            </button>
+                            <button class="delete-btn">
+                                <a href="{% url 'delete' student.id %}">Delete</a>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock content %}
