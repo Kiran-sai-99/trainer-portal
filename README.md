@@ -150,19 +150,25 @@ http://127.0.0.1:8000/
 ## Screenshots
 
 ### Login Page
-![Login Page](screenshots/login.png)
+![Login Page](https://github.com/Kiran-sai-99/trainer-portal/blob/99365ace431a7911334c47ee3a6b44a388dacaa1/Login_Initial.png)
+
+### Invalid Login
+![Invalid Login](https://github.com/Kiran-sai-99/trainer-portal/blob/99365ace431a7911334c47ee3a6b44a388dacaa1/Invalid_Login.png)
 
 ### Signup Page
-![Signup Page](screenshots/signup.png)
-
-### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Signup Page](https://github.com/Kiran-sai-99/trainer-portal/blob/99365ace431a7911334c47ee3a6b44a388dacaa1/Register_User.png)
 
 ### Create Student
-![Create Student](screenshots/create-student.png)
+![Create Student](https://github.com/Kiran-sai-99/trainer-portal/blob/99365ace431a7911334c47ee3a6b44a388dacaa1/Create_Student.png)
 
 ### Student List
-![Student List](screenshots/student-list.png)
+![Student List](https://github.com/Kiran-sai-99/trainer-portal/blob/99365ace431a7911334c47ee3a6b44a388dacaa1/Display_Students.png)
+
+### Update Student
+![Update Student](https://github.com/Kiran-sai-99/trainer-portal/blob/99365ace431a7911334c47ee3a6b44a388dacaa1/Update_Student.png)
+
+### Delete Student
+![Delete Student](https://github.com/Kiran-sai-99/trainer-portal/blob/99365ace431a7911334c47ee3a6b44a388dacaa1/Delete_Student.png)
 
 ## Future Enhancements
 
